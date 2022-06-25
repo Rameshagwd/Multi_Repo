@@ -1,9 +1,6 @@
 pipeline {
     agent any
-    tools {
-        maven 'Maven3'
-    }
-    stages {
+		stages {
         stage ('Git Clone') {
             steps {
                 git branch: 'main', url: 'https://github.com/Rameshagwd/Multi_Repo.git'
