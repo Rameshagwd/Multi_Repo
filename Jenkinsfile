@@ -41,6 +41,7 @@ pipeline {
                     ],
 
                     credentialsId: 'Nexus',
+                    groupId: 'com.javatpoint.application1',
                     nexusVersion: 'nexus3',
                     nexusUrl: '10.32.39.203:8081',
                     protocol: 'http',
