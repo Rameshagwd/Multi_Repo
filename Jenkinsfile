@@ -11,6 +11,16 @@ pipeline {
                 sh 'mvn clean'
             }
         }
+        stage ('SonarQube Scan') {
+            steps {
+                sh 'mvn sonar:sonar -Dsonar.host.url=10.32.39.252:9000 -Dsonar.login=ce33befa50cf5e6e327afbcb25adcc41c0fcc930'
+            }
+        }
+        stage ('MVN Validate') {
+            steps {
+                sh 'mvn validate'
+            }
+        }
         stage ('MVN Compile') {
             steps {
                 sh 'mvn compile'
