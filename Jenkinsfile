@@ -13,7 +13,8 @@ pipeline {
         }
         stage ('SonarQube Scan') {
             steps {
-              sh 'mvn sonar:sonar -Dsonar.host.url=http://10.32.39.109:9000 -Dsonar.login=b5a5f44290d4f8969b04bfdec7eaaf155ebc5849'  
+              sh 'mvn sonar:sonar -Dsonar.host.url=http://10.32.39.109:9000 -Dsonar.login=2604f36fcd297e623df6df4aa9269f9ad4de30c8'
+              
             }
         }
         stage ('MVN Validate') {
